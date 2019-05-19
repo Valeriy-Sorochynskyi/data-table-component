@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Valeriy-Sorochynskyi/data-table-component/precache-manifest.e2257408fb84cbed008786aa9e139960.js"
+  "/Valeriy-Sorochynskyi/data-table-component/precache-manifest.7456bde27f7e7ced287db2a868087536.js"
 );
 
 self.addEventListener('message', (event) => {

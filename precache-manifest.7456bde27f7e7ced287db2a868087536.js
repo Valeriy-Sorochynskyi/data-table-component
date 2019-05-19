@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "478d694035bf0636cbeeb0394a66eef4",
+    "revision": "5f40401b8a0df78195d2332fc9530412",
     "url": "/Valeriy-Sorochynskyi/data-table-component/index.html"
   },
   {
-    "revision": "a6efa84c99bc56aa9388",
+    "revision": "3523fdc73d19b37d32f1",
     "url": "/Valeriy-Sorochynskyi/data-table-component/static/css/main.2cce8147.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Valeriy-Sorochynskyi/data-table-component/static/js/2.b41502e9.chunk.js"
   },
   {
-    "revision": "a6efa84c99bc56aa9388",
-    "url": "/Valeriy-Sorochynskyi/data-table-component/static/js/main.eae88df1.chunk.js"
+    "revision": "3523fdc73d19b37d32f1",
+    "url": "/Valeriy-Sorochynskyi/data-table-component/static/js/main.ec6c3321.chunk.js"
   },
   {
     "revision": "5d4d96b0c00bbd7d41b3",
