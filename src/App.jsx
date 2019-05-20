@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import DATA from "../src/data/data";
 import SearchInput from "../src/components/SearchInput/SearchInput";
-import Table from '../src/components/Table/Table';
+import Table from "../src/components/Table/Table";
 
 class App extends Component {
   state = {
@@ -20,7 +20,6 @@ class App extends Component {
       data: DATA.filter(item =>
         item.name.toLowerCase().includes(value.toLowerCase())
       ),
-      value: "",
     });
   };
 
@@ -40,10 +39,22 @@ class App extends Component {
             />
           </div>
         </div>
-        <div className="row">
+        <div className="row justify-content-center">
           {data.length > 0 ? (
             <Table data={data} />
-          ): ''}
+          ) : (
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  {DATA.map(item => Object.keys(item))[0].map((item, i) => (
+                    <th scope="col" key={i}>
+                      {item}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+            </table>
+          )}
         </div>
       </div>
     );
