@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     const { data, value } = this.state;
     return (
-      <div className="container App">
+      <div className="container">
         <div className="mb-4 mt-3 row">
           <h1>Data table</h1>
         </div>
