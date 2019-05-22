@@ -2,7 +2,7 @@ import React from "react";
 import Thead from "../Thead/Thead";
 
 function Table(props) {
-  const { data, dataFromServer} = props;
+  const { data, dataFromServer } = props;
   return (
     <table className="table table-striped">
       <Thead data={dataFromServer} />
@@ -18,9 +18,7 @@ function Table(props) {
               </tr>
             ))}
         </tbody>
-      ) : (
-        null
-      )}
+      ) : null}
     </table>
   );
 }

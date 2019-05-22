@@ -1,17 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const SearchInput = (props) => {
-    const {value, handleInput, handleClick} = props;
-      return (
-        <div className="input-group">
-          <input onChange={handleInput} value={value} type="text" className="form-control" placeholder="Search" />
-          <div className="input-group-append">
-            <button onClick={handleClick} className="btn btn-secondary" type="button">
-              <i className="fa fa-search" />
-            </button>
-          </div>
-        </div>
-      );
-  }
+const SearchInput = props => {
+  const { value, handleInput } = props;
+  return (
+    <div className="form-group has-search">
+      <span className="fa fa-search form-control-feedback" />
+      <input
+        onChange={handleInput}
+        value={value}
+        type="text"
+        className="form-control"
+        placeholder="Search"
+      />
+    </div>
+  );
+};
 
-  export default SearchInput;
+export default SearchInput;

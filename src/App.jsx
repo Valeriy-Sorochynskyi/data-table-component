@@ -27,12 +27,7 @@ class App extends Component {
       );
   }
 
-  handleInput = event => {
-    const value = event.target.value;
-    this.setState({ value });
-  };
-
-  handleClick = () => {
+  filterDataByValue = () => {
     const { value, dataFromServer } = this.state;
     this.setState({
       data: dataFromServer.filter(item =>
@@ -40,6 +35,23 @@ class App extends Component {
       )
     });
   };
+
+  handleInput = event => {
+    const value = event.target.value;
+    this.setState({ value });
+    setTimeout(this.filterDataByValue, 300);
+  };
+
+  // handleClick = () => {
+  //   this.filterDataByValue();
+  // };
+
+  // handlePress = event => {
+  //   if (event.key !== "Enter") {
+  //     return;
+  //   }
+  //   this.filterDataByValue();
+  // };
 
   render() {
     const { data, value, dataFromServer, error } = this.state;
@@ -50,11 +62,7 @@ class App extends Component {
         </div>
         <div className="mb-3 row justify-content-end">
           <div className="col-9 col-sm-7 col-md-5 col-lg-4">
-            <SearchInput
-              value={value}
-              handleInput={this.handleInput}
-              handleClick={this.handleClick}
-            />
+            <SearchInput value={value} handleInput={this.handleInput} />
           </div>
         </div>
         <div className="row">
