@@ -42,17 +42,6 @@ class App extends Component {
     setTimeout(this.filterDataByValue, 300);
   };
 
-  // handleClick = () => {
-  //   this.filterDataByValue();
-  // };
-
-  // handlePress = event => {
-  //   if (event.key !== "Enter") {
-  //     return;
-  //   }
-  //   this.filterDataByValue();
-  // };
-
   render() {
     const { data, value, dataFromServer, error } = this.state;
     return (
