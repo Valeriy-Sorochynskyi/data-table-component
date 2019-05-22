@@ -1,13 +1,26 @@
 import React, { Component } from "react";
 import DATA from "../src/data/data";
+import getDataFromServer from '../src/data/getDataFromServer'
 import SearchInput from "../src/components/SearchInput/SearchInput";
 import Table from "../src/components/Table/Table";
 
 class App extends Component {
   state = {
-    data: DATA,
+    dataFromServer: [],
+    data: [],
     value: ""
   };
+
+  componentDidMount() {
+    getDataFromServer(DATA)
+      .then((DATA) => this.setState({
+        dataFromServer: DATA,
+        data: DATA,
+      }))
+      .catch((error) => console.log(error));
+  }
+
+
 
   handleInput = event => {
     const value = event.target.value;
@@ -15,16 +28,16 @@ class App extends Component {
   };
 
   handleClick = () => {
-    const { value } = this.state;
+    const { value, dataFromServer } = this.state;
     this.setState({
-      data: DATA.filter(item =>
+      data: dataFromServer.filter(item =>
         item.name.toLowerCase().includes(value.toLowerCase())
       )
     });
   };
 
   render() {
-    const { data, value } = this.state;
+    const { data, value,  dataFromServer} = this.state;
     return (
       <div className="container">
         <div className="mb-4 mt-3 row">
@@ -40,7 +53,7 @@ class App extends Component {
           </div>
         </div>
         <div className="row">
-          <Table data={data} />
+          <Table data={data} dataFromServer={dataFromServer} />
         </div>
       </div>
     );

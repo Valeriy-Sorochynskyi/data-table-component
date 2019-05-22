@@ -1,12 +1,11 @@
 import React from "react";
 import Thead from "../Thead/Thead";
-import DATA from "../../data/data";
 
 function Table(props) {
-  const { data } = props;
+  const { data, dataFromServer} = props;
   return (
     <table className="table table-striped">
-      <Thead data={DATA} />
+      <Thead data={dataFromServer} />
       {data.length > 0 ? (
         <tbody>
           {data
