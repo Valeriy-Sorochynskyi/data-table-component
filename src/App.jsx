@@ -19,7 +19,7 @@ class App extends Component {
     this.setState({
       data: DATA.filter(item =>
         item.name.toLowerCase().includes(value.toLowerCase())
-      ),
+      )
     });
   };
 
@@ -27,7 +27,7 @@ class App extends Component {
     const { data, value } = this.state;
     return (
       <div className="container App">
-        <div className="mb-4 mt-3 row justify-content-center">
+        <div className="mb-4 mt-3 row">
           <h1>Data table</h1>
         </div>
         <div className="mb-3 row justify-content-end">
@@ -39,22 +39,8 @@ class App extends Component {
             />
           </div>
         </div>
-        <div className="row justify-content-center">
-          {data.length > 0 ? (
-            <Table data={data} />
-          ) : (
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  {DATA.map(item => Object.keys(item))[0].map((item, i) => (
-                    <th scope="col" key={i}>
-                      {item}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-            </table>
-          )}
+        <div className="row">
+          <Table data={data} />
         </div>
       </div>
     );

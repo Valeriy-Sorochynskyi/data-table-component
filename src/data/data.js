@@ -16,6 +16,12 @@ const DATA = [
       name: "Samsung Galaxy S10",
       price: 1000.0,
       quantity: 5
+    },
+    {
+      id:4,
+      name: "Xiaomi Redmi Note 7",
+      pice: 200.0,
+      quantity: 10
     }
   ];
 
