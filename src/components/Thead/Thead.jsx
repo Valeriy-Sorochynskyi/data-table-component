@@ -3,7 +3,7 @@ import capitalize from '../../service/service'
 
 function Thead(props) {
   const { data } = props;
-  return data.length > 0 ? (
+  return data.length ? (
     <thead>
       <tr>
         {data

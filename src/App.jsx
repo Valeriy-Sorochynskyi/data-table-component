@@ -7,7 +7,6 @@ import Table from "../src/components/Table/Table";
 class App extends Component {
   state = {
     dataFromServer: [],
-    data: [],
     value: "",
     error: null
   };
@@ -27,23 +26,16 @@ class App extends Component {
       );
   }
 
-  filterDataByValue = () => {
-    const { value, dataFromServer } = this.state;
-    this.setState({
-      data: dataFromServer.filter(item =>
-        item.name.toLowerCase().includes(value.toLowerCase())
-      )
-    });
-  };
-
   handleInput = event => {
     const value = event.target.value;
     this.setState({ value });
-    setTimeout(this.filterDataByValue, 300);
   };
 
   render() {
-    const { data, value, dataFromServer, error } = this.state;
+    const { value, dataFromServer, error } = this.state;
+    const data = dataFromServer.filter(item =>
+      item.name.toLowerCase().includes(value.toLowerCase())
+    );
     return (
       <div className="container">
         <div className="mb-4 mt-3 row">
