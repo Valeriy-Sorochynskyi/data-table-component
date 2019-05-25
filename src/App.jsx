@@ -15,8 +15,7 @@ class App extends Component {
     getDataFromServer(DATA)
       .then(DATA =>
         this.setState({
-          dataFromServer: DATA,
-          data: DATA
+          dataFromServer: DATA
         })
       )
       .catch(error =>
