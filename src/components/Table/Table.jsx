@@ -6,7 +6,7 @@ function Table(props) {
   return (
     <table className="table table-striped">
       <Thead data={dataFromServer} />
-      {data.length > 0 ? (
+      {data.length ? (
         <tbody>
           {data
             .map(item => Object.entries(item))
